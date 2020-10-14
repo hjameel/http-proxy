@@ -1,7 +1,7 @@
 {
   "name": "http-proxy-node",
   "scripts": {
-    "test": "npm run e2e"
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
