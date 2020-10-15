@@ -2,5 +2,10 @@ version: "3.8"
 services:
   nginx:
     ports:
-      - "8080:80"
+      - "80:80"
     image: nginx:1.18-alpine
+  acceptance-tests:
+    image: http-proxy-acceptance-tests
+    links:
+      - nginx
+    command: npm run test

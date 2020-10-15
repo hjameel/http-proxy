@@ -1,3 +1,8 @@
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(3);
+const fetch = require("node-fetch");
+
+it('gets an http response', async () => {
+  response = await fetch("http://nginx/");
+
+  expect(response.ok).toBeTruthy();
+  expect(await response.text()).toContain("Welcome to nginx!");
 });
